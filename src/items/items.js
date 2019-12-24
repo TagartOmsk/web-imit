@@ -1,31 +1,30 @@
 import React, {Component} from 'react';
 import Item from "./item";
-// import Category from "./category";
 
 export default class Items extends Component {
 
-    constructor(props, category) {
+    constructor(props) {
         super(props);
         this.state = {
-            category: category,
-            items: []
+            category: props.category,
         }
     }
 
     render() {
         return <React.Fragment>
-            <h2>Items for {this.state.category.render()}</h2>
+            <h3>Items in category {this.state.category.title}</h3>
             {this.renderList()}
         </React.Fragment>
     }
 
     renderList = () => {
-        return this.state.items.map((item, index) => {
+        return this.state.category.items.map((item, index) => {
             return (
                 <Item key={index}
-                          name={item.text}
-                          id={item.id}
-                          showItems={item.showItems}
+                      name={item.name}
+                      id={item.id}
+                      description={item.description}
+                      price={item.price}
                 />
             );
         });

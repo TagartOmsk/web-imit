@@ -9,11 +9,33 @@ export default class Categories extends Component {
             categories: [
                 {
                     title: "Baroque",
-                    id: 1
+                    id: 1,
+                    items: [
+                        {
+                            id: 1,
+                            name: "vase",
+                            description: "I've got it from my beloved grandma",
+                            price: 100
+                        },
+                        {
+                            id: 2,
+                            name: "teapot",
+                            description: "This is just off season now",
+                            price: 200
+                        }
+                    ]
                 },
                 {
                     title: "Modern",
-                    id: 1488
+                    id: 12,
+                    items:[
+                        {
+                            id: 3,
+                            name: "Weird-looking mic",
+                            description: "I don't like the sound of it, but you might !",
+                            price: 150
+                        }
+                    ]
                 }
             ]
         }
@@ -21,7 +43,7 @@ export default class Categories extends Component {
 
     render() {
         return <React.Fragment>
-            <h2>Categories</h2>
+            <h2>All Categories</h2>
             <p>{this.renderList()}</p>
         </React.Fragment>
     }
@@ -32,7 +54,7 @@ export default class Categories extends Component {
                 <Category key={index}
                           title={item.title}
                           id={item.id}
-                    // showItems={item.showItems}
+                          items={item.items}
                 />
             );
         });
