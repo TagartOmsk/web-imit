@@ -1,24 +1,27 @@
 import React, {Component} from 'react';
 import Item from "./item";
+import {bindActionCreators} from "redux";
+import {connect} from "react-redux"
+import chooseCategory from "../actions/category/chooseCategory";
 
-export default class Items extends Component {
+class Items extends Component {
 
     constructor(props) {
         super(props);
         this.state = {
-            category: props.category,
         }
     }
 
     render() {
         return <React.Fragment>
-            <h3>Items in category {this.state.category.title}</h3>
+            <h1>CHEEMS</h1>
+            <h3>Items in category {this.props.category.title}</h3>
             {this.renderList()}
         </React.Fragment>
     }
 
     renderList = () => {
-        return this.state.category.items.map((item, index) => {
+        return this.props.category.items.map((item, index) => {
             return (
                 <Item key={index}
                       name={item.name}
@@ -30,3 +33,9 @@ export default class Items extends Component {
         });
     };
 }
+
+const mapStateToProps = (state) => ({
+    category: state.categoryReducer.chosenCategory
+});
+
+export default connect(mapStateToProps, null)(Items);

@@ -15,17 +15,17 @@ ReactDOM.render(
     <Provider store={store}>
         <BrowserRouter>
             <Switch>
-                <Route path='/'>
+                <Route exact path='/'>
                     <Categories/>
                 </Route>
-                <Route path='/category/:id'>
+                <Route exact path='/category/:id'>
                     <Items/>
                 </Route>
                 {/*<Route path='/item/{id}'>*/}
                 {/*    <ItemPage item={}/>*/}
                 {/*</Route>*/}
             </Switch>
-        </BrowserRouter>,
+        </BrowserRouter>
     </Provider>,
     document.getElementById('root')
 );

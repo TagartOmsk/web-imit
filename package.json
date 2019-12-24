@@ -12,7 +12,9 @@
     "react-dom": "^16.12.0",
     "react-scripts": "3.3.0",
     "redux": "^4.0.4",
-    "redux-thunk": "^2.3.0"
+    "redux-thunk": "^2.3.0",
+    "react-router": "latest",
+    "history": "latest"
   },
   "scripts": {
     "start": "react-scripts start",
