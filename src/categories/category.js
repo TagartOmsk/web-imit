@@ -18,8 +18,8 @@ class Category extends Component {
     render() {
         return <React.Fragment>
             <li>
-                <Link to={"/category/" + this.id} onClick={this.sendCategory(this)}>{this.title}</Link>
-                <p onClick={this.sendCategory(this)}>{this.title}</p>
+                <Link to={"/category/" + this.id} onClick={()=>{this.sendCategory(this)}}>{this.title}</Link>
+                {/*<p onClick={this.sendCategory(this)}>{this.title}</p>*/}
                 {/* onClick срабатывает, когда создаётся вся эта поебота*/}
                 {/*{this.props.category.title}*/}
             </li>
@@ -28,7 +28,6 @@ class Category extends Component {
 
     sendCategory = (category) => {
         this.props.chooseCategory(category);
-        console.log(this.props);
         history.push("/category/" + this.id)
     }
 }

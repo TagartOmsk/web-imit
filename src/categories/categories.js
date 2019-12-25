@@ -4,7 +4,7 @@ import {bindActionCreators} from "redux";
 import chooseCategory from "../actions/category/chooseCategory";
 import {connect} from "react-redux";
 
-class Categories extends Component {
+export default class Categories extends Component {
 
     constructor(props) {
         super(props);
@@ -49,7 +49,6 @@ class Categories extends Component {
             <h2>All Categories</h2>
             {/*<h4>{this.props.category.title}</h4>*/}
             <p>{this.renderList()}</p>
-            {console.log(this)}
         </React.Fragment>
     }
 
@@ -66,12 +65,12 @@ class Categories extends Component {
     };
 }
 
-const mapStateToProps = (state) => ({
-    chosenCategory: state.categoryReducer.chosenCategory
-});
+// const mapStateToProps = (state) => ({
+//     chosenCategory: state.categoryReducer.chosenCategory
+// });
 
 // const mapDispatchToProps = (dispatch) => ({
 //     chooseCategory: bindActionCreators(chooseCategory, dispatch)
 // });
 
-export default connect(mapStateToProps, null)(Categories);
+// export default connect(mapStateToProps, null)(Categories);
