@@ -28,7 +28,7 @@ class Category extends Component {
 
     sendCategory = (category) => {
         this.props.chooseCategory(category);
-        history.push("/category/" + this.id)
+        // history.push("/category/" + this.id)
     }
 }
 

@@ -14,8 +14,8 @@ class Items extends Component {
 
     render() {
         return <React.Fragment>
-            <h1>CHEEMS</h1>
-            <h3>Items in category {this.props.category.title}</h3>
+            {/*<h1>CHEEMS</h1>*/}
+            <h3>Items in category "{this.props.category.title}"</h3>
             {this.renderList()}
         </React.Fragment>
     }
