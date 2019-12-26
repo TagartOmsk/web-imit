@@ -66,12 +66,11 @@ class Categories extends Component {
 
     componentWillMount() {
         this.props.getCategories();
-        console.log('categories ', this.props.categories)
     }
 }
 
 const mapStateToProps = (state) => ({
-    categories: state.categories
+    categories: state.categoriesListReducer.categories
 });
 
 const mapDispatchToProps = (dispatch) => ({

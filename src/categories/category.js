@@ -18,7 +18,7 @@ class Category extends Component {
     render() {
         return <React.Fragment>
             <li>
-                <Link to={"/category/" + this.id} onClick={()=>{this.sendCategory(this)}}>{this.title}</Link>
+                <Link to={"/category/" + this.id} /*onClick={()=>{this.props.chooseCategory(this)}}*/>{this.title}</Link>
                 {/*<p onClick={this.sendCategory(this)}>{this.title}</p>*/}
                 {/* onClick срабатывает, когда создаётся вся эта поебота*/}
                 {/*{this.props.category.title}*/}

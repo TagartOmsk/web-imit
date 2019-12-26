@@ -11,7 +11,7 @@ export default function () {
             ).catch(
                 response => dispatch({
                     type: types.CATEGORY_LIST_ERROR,
-                    error: response.error
+                    error: response
                 })
             )
     }
